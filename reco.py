@@ -68,6 +68,12 @@ if __name__ == '__main__':
             os.startfile(os.path.join(music_dir, songs[0]))
         elif'open gmail' in quary:
             webbrowser.open('gmail.com')
+        elif (["search"]) and 'youtube' not in quary:
+            search_term = voice_data.replace("search","")
+            url = "https://google.com/search?q=" + search_term
+            webbrowser.get().open(url)
+            # engine_speak("Here is what I found for" + search_term + "on google")
+
 
 
 
